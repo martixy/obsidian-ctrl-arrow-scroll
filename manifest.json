@@ -1,0 +1,11 @@
+{
+	"id": "ctrl-up-down-arrow-scroll",
+	"name": "Ctrl + Up/Down arrow scroll",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Ctrl + Up/Down arrow scrolls view line by line instead of moving cursor.",
+	"author": "martixy",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}
