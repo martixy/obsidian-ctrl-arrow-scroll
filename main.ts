@@ -28,10 +28,10 @@ export default class MyPlugin extends Plugin {
 
 			let editor = this.app.workspace.activeEditor?.editor
 			if (!editor) return
-			ev.preventDefault()
 			switch (ev.code) {
 				case 'ArrowUp':
 					if (ev.ctrlKey) {
+						ev.preventDefault()
 						//Don't need to bother calculating extreme values. The editor stops scrolling automatically at its limits.
 						let scrollPos = editor.getScrollInfo().top - this.settings.lines * fontSize * LINE_HEIGHT
 						editor.scrollTo(null, scrollPos)
@@ -39,6 +39,7 @@ export default class MyPlugin extends Plugin {
 					break;
 				case 'ArrowDown':
 					if (ev.ctrlKey) {
+						ev.preventDefault()
 						let scrollPos = editor.getScrollInfo().top + this.settings.lines * fontSize * LINE_HEIGHT
 						editor.scrollTo(null, scrollPos)
 					}
